@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MENZOWEAR - Men's fashion and everyday essentials.">
+  <title>MENZOWEAR | Men's Fashion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#">MENZO<span>WEAR</span></a>
+    <nav><a href="#shop">Shop</a><a href="#about">About</a><a href="#admin">Manage products</a></nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">MEN'S FASHION • EVERYDAY STYLE</p>
+      <h1>Find your<br><span>everyday look.</span></h1>
+      <p>Explore a clean, confident collection made for your style.</p>
+      <a class="primary-btn" href="#shop">Explore collection</a>
+    </div>
+    <div class="hero-art"><div class="art-label">NEW SEASON<br><b>MENZOWEAR</b></div></div>
+  </section>
+
+  <main>
+    <section class="section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE COLLECTION</p><h2>Shop men's wear</h2></div>
+        <span id="product-count" class="muted"></span>
+      </div>
+      <div id="product-grid" class="product-grid"></div>
+    </section>
+
+    <section class="about" id="about">
+      <p class="eyebrow">OUR STYLE</p><h2>Simple style.<br>Strong impression.</h2>
+      <p>MENZOWEAR is your space to showcase men's clothing and essentials.</p>
+    </section>
+
+    <section class="admin section" id="admin">
+      <div class="section-heading"><div><p class="eyebrow">STORE TOOLS</p><h2>Manage products</h2></div></div>
+      <p class="notice">Demo admin area: products added here are saved only in this browser on this device. This is not a secure or shared online admin system.</p>
+      <form id="product-form">
+        <label>Product name<input id="name" required maxlength="70" placeholder="e.g. Classic black shirt"></label>
+        <label>Price (₹)<input id="price" required type="number" min="1" step="1" placeholder="999"></label>
+        <label>Image URL<input id="image" type="url" placeholder="https://... (optional)"></label>
+        <label>Description<textarea id="description" rows="3" maxlength="300" placeholder="Write product details"></textarea></label>
+        <button class="primary-btn" type="submit">Add product</button>
+      </form>
+      <p class="small">To publish changes for every visitor and upload images safely, connect a real database/storage and a protected admin login in a later step.</p>
+    </section>
+  </main>
+
+  <footer><a class="logo" href="#">MENZO<span>WEAR</span></a><p>© <span id="year"></span> MENZOWEAR. All rights reserved.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
