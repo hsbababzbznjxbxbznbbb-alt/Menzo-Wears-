@@ -1,0 +1,23 @@
+MENZOWEAR: ONLINE DATABASE + ADMIN PANEL SETUP
+
+1. Create a project at https://supabase.com/ (free plan).
+2. In Supabase Project Settings > API, copy the Project URL and anon/public key.
+3. Open script.js and replace PASTE_YOUR_SUPABASE_PROJECT_URL and
+   PASTE_YOUR_SUPABASE_ANON_PUBLIC_KEY with those values.
+   IMPORTANT: Never put a service_role/secret key in browser code or GitHub.
+4. In Supabase > SQL Editor > New query, paste all of supabase-setup.sql and Run.
+5. In Supabase > Authentication > Users, create your admin user with your own
+   email and a strong password. Do not enable public sign-ups.
+6. Copy that user's UUID. In SQL Editor run:
+   insert into public.admin_users(user_id) values ('PASTE-USER-UUID-HERE');
+7. Optional: set WHATSAPP_NUMBER in script.js to your shop number with country
+   code, digits only, e.g. 91XXXXXXXXXX.
+8. Replace index.html, style.css and script.js in your GitHub repository and
+   commit. Netlify should automatically redeploy.
+9. Open your Netlify website > Admin. Log in with the admin email/password.
+   Add products and choose an image (JPG/PNG/WebP, max 5 MB).
+10. Products are saved online and visible to all visitors.
+
+SECURITY: Only the UUID added to public.admin_users is allowed to manage
+products. Keep your admin password private. This is a starter catalogue with
+WhatsApp ordering, not an online card-payment checkout.
